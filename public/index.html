@@ -1,0 +1,954 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Love Community Garden, Muskegon MI</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Love Community Garden, Muskegon MI" />
+    <meta
+      property="og:description"
+      content="A community garden in Nelson Neighborhood, Muskegon, MI - growing food, people, and connections through SPoP, youth programs, and the Giving Table."
+    />
+    <meta property="og:url" content="https://lovecommunitygarden.org/" />
+    <meta
+      property="og:image"
+      content="https://lovecommunitygarden.org/img/garden-hero.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovecommunitygarden" />
+    <meta name="twitter:title" content="Love Community Garden, Muskegon MI" />
+    <meta
+      name="twitter:description"
+      content="A community garden in Nelson Neighborhood, Muskegon, MI - growing food, people, and connections through SPoP, youth programs, and the Giving Table."
+    />
+    <meta
+      name="twitter:image"
+      content="https://lovecommunitygarden.org/img/garden-hero.jpg"
+    />
+
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  </head>
+
+  <body class="bgexspresso text-white">
+    <!-- NAV -->
+    <header
+      id="siteHeader"
+      class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+    >
+      <nav
+        id="navbar"
+        class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-4 bg-espresso/70 backdrop-blur border-b border-white/10 transition-all duration-300"
+      >
+        <a href="#home" class="flex items-center gap-3">
+          <img
+            id="navLogo"
+            src="img/logo.png"
+            alt="Love Community Garden Logo"
+            class="h-12 w-12 shrink-0 transition-all duration-300"
+          />
+          <div class="leading-tight">
+            <div class="text-lg font-semibold tracking-wide">
+              Love Community Garden
+            </div>
+            <div class="text-xs text-white/70">Live • Grow • Connect</div>
+          </div>
+        </a>
+
+        <button
+          id="mobileMenuBtn"
+          class="md:hidden rounded-lg border border-white/20 px-3 py-2 text-sm hover:bg-white/10"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          Menu
+        </button>
+
+        <ul class="hidden md:flex items-center gap-6 text-sm">
+          <li>
+            <a
+              class="navlink hover:text-royal-gold"
+              title="Love Community Garden"
+              href="#home"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              class="navlink hover:text-royal-gold"
+              title="Senior Power of Produce"
+              href="#spop"
+              >SPoP</a
+            >
+          </li>
+          <li>
+            <a
+              class="navlink hover:text-royal-gold"
+              title="Love Youth Programming"
+              href="#love-youth"
+              >Love Youth</a
+            >
+          </li>
+          <li>
+            <a
+              class="navlink hover:text-royal-gold"
+              title="The Giving Table"
+              href="#giving-table"
+              >Giving Table</a
+            >
+          </li>
+          <li>
+            <a
+              class="navlink hover:text-royal-gold"
+              title="How you can Help"
+              href="#help-love"
+              >Help</a
+            >
+          </li>
+          <li>
+            <a
+              class="navlink hover:text-royal-gold"
+              title="Connect With Us"
+              href="#connect"
+              >Connect</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Mobile menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden border-b border-white/10 bg-espresso/95 backdrop-blur"
+      >
+        <ul class="mx-auto max-w-7xl px-4 py-3 flex flex-col gap-3 text-sm">
+          <li><a class="navlink block py-2" href="#home">Home</a></li>
+          <li>
+            <a class="navlink block py-2" href="#spop"
+              >SPoP (Senior Power of Produce)</a
+            >
+          </li>
+          <li>
+            <a class="navlink block py-2" href="#love-youth">Love Youth</a>
+          </li>
+          <li>
+            <a class="navlink block py-2" href="#giving-table">Giving Table</a>
+          </li>
+          <li><a class="navlink block py-2" href="#help-love">Help Love</a></li>
+          <li><a class="navlink block py-2" href="#connect">Connect</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- PAGE -->
+    <main class="pt-24">
+      <!-- HOME -->
+      <section
+        id="home"
+        class="min-h-screen parallax relative"
+        style="background-image: url(&quot;./img/garden-hero.jpg&quot;)"
+      >
+        <div
+          class="absolute inset-0 bg-linear-to-b from-black/70 via-black/55 to-espresso/95"
+        ></div>
+
+        <div class="relative mx-auto max-w-7xl px-4 py-20">
+          <div class="max-w-2xl">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+              Growing food.<br />
+              <span class="text-green-800">Growing people.</span><br />
+              <span class="text-yellow-500">Growing community.</span>
+            </h1>
+
+            <p class="mt-5 text-white/80 text-lg">
+              Love Community Garden is a garden in Nelson neighborhood in
+              Muskegon, MI that bring neighbors together to grow food, build
+              skills, and share produce. We run programs for seniors and youth,
+              host a giving table for neighbors to share resources, and create a
+              welcoming space for connection and growth. A social experiment in
+              community care, healthy food access, and joyful gardening.
+            </p>
+
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a
+                href="#help-love"
+                class="rounded-xl bgchocolate px-5 py-3 font-semibold text-espresso hover:brightness-110 transition ocus:ring-4 focus:outline-none focus:ring-orange-800 dark:focus:ring-green-800"
+              >
+                Donate / Volunteer
+              </a>
+              <a
+                href="#spop"
+                class="rounded-xl border bg-amber-900 border-white/25 px-5 py-3 font-semibold hover:bg-white/10 transition hover:bg-linear-to-br"
+              >
+                Explore Programs
+              </a>
+            </div>
+
+            <div class="mt-10 grid grid-cols-2 gap-4 max-w-xl">
+              <div class="rounded-2xl bg-white/10 p-4 border border-white/10">
+                <div class="text-royal-gold font-bold text-xl">SPoP</div>
+                <div class="text-white/75 text-sm mt-1">
+                  Senior Power of Produce
+                </div>
+              </div>
+              <div class="rounded-2xl bg-white/10 p-4 border border-white/10">
+                <div class="text-royal-gold font-bold text-xl">Love Youth</div>
+                <div class="text-white/75 text-sm mt-1">
+                  Garden learning & leadership
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SPOp -->
+      <section
+        id="spop"
+        class="min-h-screen parallax relative"
+        style="
+          background-image: url(&quot;https://assets.simpleviewinc.com/simpleview/image/upload/crm/muskegonmi/Overview-L-3-_9D46EBDD-5056-A36F-23F8E2B372CC24C1-9d46ea335056a36_9d46ee75-5056-a36f-231817b29d203ac2.jpg&quot;);
+        "
+      >
+        <div class="absolute inset-0 bg-black/65"></div>
+
+        <div class="relative mx-auto max-w-7xl px-4 py-20">
+          <div class="max-w-3xl">
+            <p class="text-royal-gold font-semibold tracking-wide">SPoP</p>
+            <h2 class="text-3xl md:text-5xl font-extrabold mt-2">
+              Senior Power of Produce
+            </h2>
+            <p class="mt-4 text-white/80 text-sm bg-black/40 backdrop-blur-md">
+              Since 2016, the Senior Power of Produce (SPoP) program has
+              welcomed nearly 2,000 seniors (age 60+) each week to the Muskegon
+              Farmers Market from mid-July through August. Participants receive
+              weekly vouchers—$6 in 2023—to purchase fresh, healthy produce,
+              helping promote better nutrition and overall wellness.
+            </p>
+            <p class="mt-4 text-white/80 text-sm">
+              While the program is not income-based, it plays an important role
+              in addressing food insecurity and malnutrition among older adults.
+              In addition to fresh produce, seniors can connect with local
+              organizations offering valuable resources and support services at
+              the market.
+            </p>
+            <p class="mt-4 text-white/80 text-sm">
+              SPoP is made possible through the leadership of the
+              <a
+                href="https://www.fruitportlions.org/"
+                target="_blank"
+                class="text-royal-gold hover:underline"
+              >
+                Fruitport/Shoreline Lions Club </a
+              >, dedicated volunteers, and strong partnerships with the
+              <a
+                href="https://www.muskegon-mi.gov/"
+                target="_blank"
+                class="text-royal-gold hover:underline"
+              >
+                City of Muskegon </a
+              >,
+              <a
+                href="https://seniorresourceswmi.org/muskegon-county-senior-millage/"
+                target="_blank"
+                class="text-royal-gold hover:underline"
+              >
+                Senior Resources (Senior Millage) </a
+              >, and surrounding communities. Beyond nutrition, the program has
+              become a meaningful social experience that many seniors look
+              forward to each week.
+            </p>
+            <address class="mt-4">
+              <a
+                href="https://www.muskegonfarmersmarket.com/"
+                target="_blank"
+                class="text-royal-gold hover:underline"
+              >
+                Muskegon Farmers Market
+              </a>
+              <br />
+              <a
+                href="https://maps.app.goo.gl/ACmyuY2Bcppqpo1e9"
+                target="_blank"
+              >
+                242 W Western Ave<br />
+                Muskegon, MI 49440<br
+              /></a>
+              <phone><a href="tel:(231) 722-3251">(231) 722-3251</a></phone>
+            </address>
+          </div>
+          <div class="mt-10">
+            <div class="mt-5">
+              <div class="flex flex-col items-center space-y-4">
+                <div class="w-full max-w-3xl min-[12em]:">
+                  <button
+                    class="gallery-item group rounded-2xl overflow-hidden border border-white/10 bg-white/5 min-h-64"
+                    data-full="./images/loveSPop1007.jpg"
+                  >
+                    <img
+                      id="main-image"
+                      src="./images/loveSPoP1004.jpg"
+                      class="w-full rounded-lg gallery-item cursor-pointer border border-white/10 shadow-lg object-cover group-hover:scale-105 transition duration-300"
+                      alt="Registration with a Smile at Senior Power of Produce"
+                    />
+                  </button>
+                </div>
+
+                <div
+                  class="grid grid-cols-8 max-w-3xl gap-4"
+                  id="thumbnail-container"
+                >
+                  <img
+                    src="./images/loveSPoP1008.jpg"
+                    class="thumb rounded-lg md:h-24 h-14 object-cover cursor-pointer hover:opacity-80"
+                    alt="Registration with a Smile at Senior Power of Produce"
+                  />
+                  <img
+                    src="./images/loveSPoP1001.jpg"
+                    class="thumb rounded-lg md:h-24 h-14 object-cover cursor-pointer hover:opacity-80"
+                    alt="Our Senior's Love for Fresh Produce at Senior Power of Produce"
+                  />
+                  <img
+                    src="./images/loveSPoP1003.jpg"
+                    class="thumb rounded-lg md:h-24 h-14 object-cover cursor-pointer hover:opacity-80"
+                    alt="The Registration Process at Senior Power of Produce"
+                  />
+                  <img
+                    src="./images/loveSPoP1004.jpg"
+                    class="thumb rounded-lg md:h-24 h-14 object-cover cursor-pointer hover:opacity-80"
+                    alt="Even in the rain, Seniors Enjoy the Market at Senior Power of Produce"
+                  />
+                  <img
+                    src="./images/loveSPoP1005.jpg"
+                    class="thumb rounded-lg md:h-24 h-14 object-cover cursor-pointer hover:opacity-80"
+                    alt="Sharing the love of fresh produce at Senior Power of Produce"
+                  />
+                  <img
+                    src="./images/loveSPoP1006.jpg"
+                    class="thumb rounded-lg md:h-24 h-14 object-cover cursor-pointer hover:opacity-80"
+                    alt="lovely seniors enjoying the market at Senior Power of Produce"
+                  />
+                  <img
+                    src="./images/loveSPoP1007.jpg"
+                    class="thumb rounded-lg md:h-24 h-14 object-cover cursor-pointer hover:opacity-80"
+                    alt="Registering for Tokens at Senior Power of Produce"
+                  />
+                  <img
+                    src="./images/loveSPoP1018.jpg"
+                    class="thumb rounded-lg md:h-24 h-14 object-cover cursor-pointer hover:opacity-80"
+                    alt="Registering for Tokens at Senior Power of Produce"
+                  />
+                </div>
+              </div>
+
+              <script>
+                document
+                  .getElementById("thumbnail-container")
+                  .addEventListener("click", function (e) {
+                    if (e.target.classList.contains("thumb")) {
+                      document.getElementById("main-image").src = e.target.src;
+                    }
+                  });
+              </script>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LOVE YOUTH -->
+      <section
+        id="love-youth"
+        class="min-h-screen parallax relative"
+        style="background-image: url(&quot;./img/youth_movement.jpg&quot;)"
+      >
+        <div
+          class="absolute inset-0 bg-linear-to-b from-black/65 via-black/55 to-black/70"
+        ></div>
+
+        <div class="relative mx-auto max-w-7xl px-4 py-20">
+          <div class="max-w-3xl">
+            <p class="text-royal-gold font-semibold tracking-wide">
+              Love Youth
+            </p>
+            <h2 class="text-3xl md:text-5xl font-extrabold mt-2">
+              Youth Learning, Fun &amp; Growth
+            </h2>
+            <p
+              class="mt-4 text-white/80 text-lg bg-black/40 backdrop-blur-md rounded-2xl p-4"
+            >
+              Love Community Garden offers a variety of youth programs designed
+              to engage children and teens in health, growing food, building
+              community connections, and having fun. Through hands-on
+              activities, family get togethers, back to school supplies, and
+              more, we aim to inspire a love for gardening, healthy living, and
+              community care among our youth. Our programs are open to all local
+              youth and are offered free of charge thanks to the support of our
+              donors and volunteers.
+            </p>
+          </div>
+          <div class="mt-10">
+            <h2 class="text-4xl font-bold text-center mb-8">
+              Love Youth in Action
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+              <!-- Large item -->
+              <div
+                class="md:col-span-2 md:row-span-2 relative overflow-hidden rounded-2xl shadow-lg group"
+              >
+                <img
+                  src="./images/loveYouth1004.jpg"
+                  alt="Back to School Giveaway at Love Community Garden"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-80 transition-opacity duration-300"
+                >
+                  <div class="absolute bottom-0 left-0 right-0 p-4">
+                    <h3 class="text-2xl font-bold text-white">
+                      Back to School Giveaway
+                    </h3>
+                    <p class="text-white">
+                      Back to School Giveaway at Love Community Garden
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Two small items -->
+              <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+                <img
+                  src="./images/loveYouth1006.jpg"
+                  alt="Harvest Fun at Love Community Garden"
+                  class="w-full h-48 object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-80 transition-opacity duration-300"
+                >
+                  <div class="absolute bottom-0 left-0 right-0 p-4">
+                    <h4 class="text-xl font-bold text-white">
+                      Harvest Festival
+                    </h4>
+                  </div>
+                </div>
+              </div>
+              <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+                <img
+                  src="./images/loveYouth1007.jpg"
+                  alt="Youth Gardening at Love Community Garden"
+                  class="w-full h-48 object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >
+                  <div class="absolute bottom-0 left-0 right-0 p-4">
+                    <h4 class="text-xl font-bold text-white">
+                      Youth Gardening at Love Community Garden
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10">
+          <div class="bg-base-100 py-8 sm:py-16 lg:py-24">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div class="mt-12 mb-12 grid gap-6 md:grid-cols-2">
+                <div>
+                  <img
+                    src="./images/loveYouth1004.jpg"
+                    alt="Back to School Giveaway at Love Community Garden"
+                    class="rounded-box aspect-5/4 min-h-121.75 object-cover"
+                  />
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                  <img
+                    src="./images/loveYouth1006.jpg"
+                    alt="Harvest Fun at Love Community Garden"
+                    class="rounded-box aspect-5/4 min-h-57.75 object-cover"
+                  />
+                  <img
+                    src="./images/loveYouth1007.jpg"
+                    alt="Youth Gardening at Love Community Garden"
+                    class="rounded-box aspect-5/4 min-h-57.75 object-cover"
+                  />
+                  <img
+                    src="./images/loveYouth1008.jpg"
+                    alt="Community Picnic at Love Community Garden"
+                    class="rounded-box aspect-5/4 min-h-57.75 object-cover"
+                  />
+                  <img
+                    src="./images/loveYouth1013.jpg"
+                    alt="Old Fashion Holiday's Love Community Garden w/ Fruitport Lions Club"
+                    class="rounded-box aspect-5/4 min-h-57.75 object-cover"
+                  />
+                  <img
+                    src="./images/loveYouth1015.jpg"
+                    alt="Love Community Garden Youth Physical Activity Event"
+                    class="rounded-box aspect-5/4 min-h-57.75 object-cover"
+                  />
+                </div>
+
+                <div class="grid grid-cols-2 gap-6">
+                  <img
+                    src="./images/loveYouth1014.jpg"
+                    alt="Old Fashion Holiday's Love Community Garden w/ Fruitport Lions Club"
+                    class="rounded-box aspect-5/4 min-h-57.75 object-cover"
+                  />
+                  <img
+                    src="./images/Youth_Programming1.jpg"
+                    alt="Seeing Santa at Love Community Garden's Old Fashion Holiday's Event"
+                    class="rounded-box aspect-5/4 min-h-57.75 object-cover"
+                  />
+                  <img
+                    src="./images/loveYouth1016.jpg"
+                    alt="Setting up for Love Community Garden's Back to School Giveaway"
+                    class="rounded-box aspect-5/4 min-h-57.75 object-cover"
+                  />
+                  <img
+                    src="./images/Youth_Programming5.jpg"
+                    alt="Youth out at the Dairy at Love Community Garden's Fall Field Trip"
+                    class="rounded-box aspect-5/4 min-h-57.75 object-cover"
+                  />
+                </div>
+                <div>
+                  <img
+                    src="./images/loveYouth1017.jpg"
+                    alt="Supply run for Love Community Garden's Back to School Giveaway"
+                    class="rounded-box aspect-5/4 min-h-121.75 object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GIVING TABLE -->
+      <section
+        id="giving-table"
+        class="min-h-screen parallax relative"
+        style="
+          background-image: url(&quot;https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=2400&q=70&quot;);
+        "
+      >
+        <div class="absolute inset-0 bg-black/65"></div>
+
+        <div class="relative mx-auto max-w-7xl px-4 py-20">
+          <div class="max-w-3xl">
+            <p class="text-royal-gold font-semibold tracking-wide">
+              Giving Table
+            </p>
+            <h2 class="text-3xl md:text-5xl font-extrabold mt-2">
+              Share What You Can
+            </h2>
+            <p
+              class="mt-4 text-white/80 text-lg bg-black/40 backdrop-blur-md rounded-2xl p-4"
+            >
+              An organization that is solely ran by volunteers and donations
+              given by the community. At the Giving Table we provide the the
+              unhoused and low-income community members with free clothing,
+              seasonal gear and hygiene products. We believe that everyone has a
+              right to have the basic necessities and we help fill that gap
+              where needed.
+            </p>
+          </div>
+
+          <div class="mt-10">
+            <h3 class="text-xl font-bold">At the table</h3>
+            <div class="mt-5 grid grid-cols-2 md:grid-cols-3 gap-4">
+              <button
+                class="gallery-item group rounded-2xl overflow-hidden border border-white/10 bg-white/5"
+                data-full="./images/GiveTable200.jpg"
+              >
+                <img
+                  class="h-40 w-full object-cover group-hover:scale-105 transition duration-300"
+                  src="./images/GiveTable200.jpg"
+                  alt="Giving Table because everyone needs a little help sometimes"
+                />
+                <div
+                  class="p-3 text-sm text-white/80 group-hover:text-royal-gold"
+                >
+                  Stocking the table
+                </div>
+              </button>
+
+              <button
+                class="gallery-item group rounded-2xl overflow-hidden border border-white/10 bg-white/5"
+                data-full="./images/GiveTable203.jpg"
+              >
+                <img
+                  class="h-40 w-full object-cover group-hover:scale-105 transition duration-300"
+                  src="./images/GiveTable203.jpg"
+                  alt="Coming together for the community at the Giving Table"
+                />
+                <div
+                  class="p-3 text-sm text-white/80 group-hover:text-royal-gold"
+                >
+                  Coming together
+                </div>
+              </button>
+
+              <button
+                class="gallery-item group rounded-2xl overflow-hidden border border-white/10 bg-white/5"
+                data-full="./images/GiveTable204.jpg"
+              >
+                <img
+                  class="h-40 w-full object-cover group-hover:scale-105 transition duration-300"
+                  src="./images/GiveTable204.jpg"
+                  alt="The Giving Table on Houston and 3rd in Muskegon, MI"
+                />
+                <div
+                  class="p-3 text-sm text-white/80 group-hover:text-royal-gold"
+                >
+                  Neighbors supporting Neighbors
+                </div>
+              </button>
+              <button
+                class="gallery-item group rounded-2xl overflow-hidden border border-white/10 bg-white/5"
+                data-full="./images/GiveTable205.jpg"
+              >
+                <img
+                  class="h-40 w-full object-cover group-hover:scale-105 transition duration-300"
+                  src="./images/GiveTable205.jpg"
+                  alt="The Giving Table Policy"
+                />
+                <div
+                  class="p-3 text-sm text-white/80 group-hover:text-royal-gold"
+                >
+                  Take what you need, leave what you can
+                </div>
+              </button>
+              <button
+                class="gallery-item group rounded-2xl overflow-hidden border border-white/10 bg-white/5"
+                data-full="./images/GiveTable206.jpg"
+              >
+                <img
+                  class="h-40 w-full object-cover group-hover:scale-105 transition duration-300"
+                  src="./images/GiveTable206.jpg"
+                  alt="People helping people at the Giving Table in Muskegon, MI"
+                />
+                <div
+                  class="p-3 text-sm text-white/80 group-hover:text-royal-gold"
+                >
+                  Dignity and respect for all
+                </div>
+              </button>
+              <button
+                class="gallery-item group rounded-2xl overflow-hidden border border-white/10 bg-white/5"
+                data-full="./images/GiveTable207.jpg"
+              >
+                <img
+                  class="h-40 w-full object-cover group-hover:scale-105 transition duration-300"
+                  src="./images/GiveTable207.jpg"
+                  alt="The volunteers of the Giving Table in Muskegon, MI"
+                />
+                <div
+                  class="p-3 text-sm text-white/80 group-hover:text-royal-gold"
+                >
+                  The volunteers who make it happen
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HELP LOVE (TEXT SECTION) -->
+      <section id="help-love" class="min-h-screen bg-hunter-green">
+        <div class="mx-auto max-w-7xl px-4 py-20">
+          <p class="text-royal-gold font-semibold tracking-wide">Help Love</p>
+          <h2 class="text-3xl md:text-5xl font-extrabold mt-2">
+            Donate • Volunteer • Partner
+          </h2>
+
+          <div class="mt-8 grid md:grid-cols-3 gap-6">
+            <div class="rounded-2xl bg-white/10 p-6 border border-white/10">
+              <h3 class="text-xl font-bold">Donate</h3>
+              <p class="mt-2 text-white/80">
+                Support seeds, tools, raised beds, youth programming, and senior
+                produce access.
+              </p>
+              <ul class="mt-4 text-sm text-white/80 list-disc pl-5 space-y-1">
+                <li>One-time gifts</li>
+                <li>Monthly support</li>
+                <li>In-kind supplies</li>
+              </ul>
+              <a
+                href="#connect"
+                class="inline-block mt-5 rounded-xl bg-royal-gold text-espresso px-4 py-2 font-semibold hover:brightness-110"
+              >
+                Ask how to donate
+              </a>
+            </div>
+
+            <div class="rounded-2xl bg-white/10 p-6 border border-white/10">
+              <h3 class="text-xl font-bold">Volunteer</h3>
+              <p class="mt-2 text-white/80">
+                Join workdays, mentor youth, help with harvesting, or assist
+                with events.
+              </p>
+              <ul class="mt-4 text-sm text-white/80 list-disc pl-5 space-y-1">
+                <li>Garden workdays</li>
+                <li>Teaching & mentoring</li>
+                <li>Distribution support</li>
+              </ul>
+              <a
+                href="#connect"
+                class="inline-block mt-5 rounded-xl border border-white/25 px-4 py-2 font-semibold hover:bg-white/10"
+              >
+                Volunteer signup
+              </a>
+            </div>
+
+            <div class="rounded-2xl bg-white/10 p-6 border border-white/10">
+              <h3 class="text-xl font-bold">Partner</h3>
+              <p class="mt-2 text-white/80">
+                Churches, schools, businesses, and neighbors—let’s build healthy
+                systems together.
+              </p>
+              <ul class="mt-4 text-sm text-white/80 list-disc pl-5 space-y-1">
+                <li>Sponsor a bed or program</li>
+                <li>Host a workshop</li>
+                <li>Resource sharing</li>
+              </ul>
+              <a
+                href="#connect"
+                class="inline-block mt-5 rounded-xl bg-chocolate text-espresso px-4 py-2 font-semibold hover:brightness-110"
+              >
+                Partner with us
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONNECT (TEXT SECTION) -->
+      <section id="connect" class="min-h-screen bg-espresso">
+        <div class="mx-auto max-w-7xl px-4 py-20">
+          <p class="text-royal-gold font-semibold tracking-wide">Connect</p>
+          <h2 class="text-3xl md:text-5xl font-extrabold mt-2">
+            Let’s Get in Touch
+          </h2>
+
+          <div class="mt-8 grid md:grid-cols-2 gap-8">
+            <div class="rounded-2xl bg-white/10 p-6 border border-white/10">
+              <h3 class="text-xl font-bold">Contact</h3>
+              <p class="mt-2 text-white/80">
+                We’d love to hear from you! Whether you have questions, want to
+                get involved, or just want to say hi, reach out anytime.
+              </p>
+
+              <div class="mt-4 space-y-2 text-sm text-white/80">
+                <div>
+                  <span class="text-white/60">Email:</span>
+                  info @ lovecommunitygarden.org
+                </div>
+                <div>
+                  <span class="text-white/60">Phone:</span
+                  ><a href="tel:2319033037"> (231) 903 - 3037</a>
+                </div>
+                <div>
+                  <span class="text-white/60">address:</span>
+                  <a
+                    href="https://share.google/6mQdyFstGV6Jv7hkn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <address>
+                      Love Community Garden<br />
+                      481 Monroe Ave<br />
+                      Muskegon, MI 49441
+                    </address>
+                  </a>
+                </div>
+              </div>
+
+              <div class="mt-6 flex flex-wrap gap-3">
+                <a
+                  class="rounded-xl bg-royal-gold text-espresso px-4 py-2 font-semibold hover:brightness-110"
+                  href="#"
+                >
+                  Instagram
+                </a>
+                <a
+                  class="rounded-xl border border-white/25 px-4 py-2 font-semibold hover:bg-white/10"
+                  href="https://www.facebook.com/lovecommunitygarden"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Facebook
+                </a>
+              </div>
+            </div>
+
+            <div class="rounded-2xl bg-white/10 p-6 border border-white/10">
+              <h3 class="text-xl font-bold">Quick Message</h3>
+              <p class="mt-2 text-white/80 text-sm">
+                (Static starter form—wire it to your backend later, or use
+                Formspree/Netlify Forms.)
+              </p>
+
+              <form
+                class="mt-4 space-y-3"
+                onsubmit="
+                  event.preventDefault();
+                  alert('Thanks! Hook this up to your form handler.');
+                "
+              >
+                <input
+                  class="w-full rounded-xl bg-black/30 border border-white/10 px-4 py-3 outline-none focus:border-royal-gold"
+                  placeholder="Name"
+                  required
+                />
+                <input
+                  class="w-full rounded-xl bg-black/30 border border-white/10 px-4 py-3 outline-none focus:border-royal-gold"
+                  placeholder="Email"
+                  type="email"
+                  required
+                />
+                <textarea
+                  class="w-full rounded-xl bg-black/30 border border-white/10 px-4 py-3 outline-none focus:border-royal-gold"
+                  placeholder="How can we help?"
+                  rows="5"
+                  required
+                ></textarea>
+                <button
+                  class="w-full rounded-xl bg-chocolate text-espresso px-4 py-3 font-semibold hover:brightness-110"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <footer class="mt-14 text-xs text-white/60">
+            © <span id="year"></span> Love Community Garden • Built with
+            TailwindCSS design and maintained by
+            <a href="https://g-coded.com" target="_blank" class=""
+              >G-coded.com</a
+            >
+          </footer>
+        </div>
+      </section>
+    </main>
+
+    <!-- FULLSCREEN MODAL -->
+    <div
+      id="imageModal"
+      class="fixed inset-0 z-999 hidden items-center justify-center modal-backdrop p-4"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Image viewer"
+    >
+      <button
+        id="closeModal"
+        class="absolute top-4 right-4 rounded-xl bg-white/10 border border-white/20 px-4 py-2 text-sm hover:bg-white/20"
+      >
+        Close
+      </button>
+
+      <img
+        id="modalImg"
+        alt="Expanded gallery view"
+        class="max-h-[90vh] max-w-[92vw] rounded-2xl border border-white/10 shadow-2xl"
+      />
+    </div>
+
+    <script>
+      // Footer year
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Sticky nav + shrink logo on scroll
+      const navbar = document.getElementById("navbar");
+      const logo = document.getElementById("navLogo");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+
+      function onScroll() {
+        const scrolled = window.scrollY > 40;
+        navbar.classList.toggle("py-4", !scrolled);
+        navbar.classList.toggle("py-2", scrolled);
+        navbar.classList.toggle("bg-espresso/70", !scrolled);
+        navbar.classList.toggle("bg-espresso/95", scrolled);
+        logo.classList.toggle("h-12", !scrolled);
+        logo.classList.toggle("w-12", !scrolled);
+        logo.classList.toggle("h-9", scrolled);
+        logo.classList.toggle("w-9", scrolled);
+      }
+      window.addEventListener("scroll", onScroll);
+      onScroll();
+
+      // Mobile menu toggle
+      mobileMenuBtn?.addEventListener("click", () => {
+        const isHidden = mobileMenu.classList.contains("hidden");
+        mobileMenu.classList.toggle("hidden", !isHidden);
+        mobileMenuBtn.setAttribute("aria-expanded", String(isHidden));
+      });
+
+      // Smooth snap scroll (menu click)
+      document.querySelectorAll(".navlink").forEach((a) => {
+        a.addEventListener("click", (e) => {
+          // close mobile menu
+          mobileMenu.classList.add("hidden");
+          mobileMenuBtn?.setAttribute("aria-expanded", "false");
+
+          const href = a.getAttribute("href");
+          if (!href || !href.startsWith("#")) return;
+
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (!target) return;
+
+          // slow-ish smooth scroll
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      });
+
+      // Gallery modal
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImg");
+      const closeModal = document.getElementById("closeModal");
+
+      function openModal(src) {
+        modalImg.src = src;
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+        document.body.style.overflow = "hidden";
+      }
+
+      function hideModal() {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+        modalImg.src = "";
+        document.body.style.overflow = "";
+      }
+
+      document.querySelectorAll(".gallery-item").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const full = btn.src || btn.getAttribute("src");
+          if (full) openModal(full);
+        });
+      });
+
+      closeModal.addEventListener("click", hideModal);
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) hideModal();
+      });
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") hideModal();
+      });
+    </script>
+  </body>
+</html>
