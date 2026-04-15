@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+:root {
+    interpolate-size: allow-keywords;
+    --espresso: #5e3023ff;
+    --chocolate: #d96c06ff;
+    --royal-gold: #f4d35eff;
+    --hunter-green: #415d43ff;
+    --burgundy: #88292fff;
+}
+
+label:has(+ input:required):after,
+label:has(+ textarea:required):after,
+label:has(+ select:required):after {
+    content: ' *';
+    color: red;
+}
+
+input:user-invalid,
+select:user-invalid {
+    border: 2px solid red;
+}
+
+/*noinspection CssInvalidPseudoSelector*/
+input:user-valid,
+select:user-valid {
+    border: 2px solid var(--clr-accent);
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-block-size: 100svh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    font-size: (--fs-0);
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--espresso);
+    color: var(--royal-gold);
+}
+
+/* Snap scrolling */
+main {
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 90px;
+    /* keeps section titles visible under sticky nav */
+}
+
+section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+/* Simple parallax backgrounds (works best on desktop) */
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 768px) {
+    .parallax {
+        background-attachment: scroll;
+        /* mobile Safari tends to hate fixed */
+    }
+}
+
+/* Modal */
+.modal-backdrop {
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.bgexspresso {
+    background-color: var(--espresso);
+}
+
+.bgchocolate {
+    background-color: var(--chocolate);
+}
+
+.textroyalgold {
+    color: var(--royal-gold);
+}
+
+.bg-\[--expresso\] {
+    background-color: --hunter-green;
+}
+
+.text-royal-gold {
+    color: var(--royal-gold);
+}
+
+.blur-c {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        backdrop-filter: blur(0.5px);
+        background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.15));
+    }
+}
+
+.background {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}

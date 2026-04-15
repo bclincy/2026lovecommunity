@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Love Community Garden Muskegon, MI</title>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <style>
+      /* Custom Colors from Palette */
+      :root {
+        --hunter-green: #415d43;
+        --royal-gold: #f4d35e;
+        --espresso: #5e3023;
+      }
+      .parallax {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-stone-50 text-[#5e3023]"
+    x-data="{ scrolled: false, modalOpen: false, activeImg: '' }"
+    @scroll.window="scrolled = (window.pageYOffset > 50)"
+  >
+    <nav
+      :class="scrolled ? 'py-2 bg-[--hunter-green] shadow-lg' : 'py-6 bg-transparent'"
+      class="fixed w-full z-50 transition-all duration-300 text-white px-8 flex justify-between items-center"
+    >
+      <div class="flex items-center">
+        <img
+          src="img/logo.png"
+          alt="Shoreline Branch of the Fruitport Lion Logo"
+          :class="scrolled ? 'h-10' : 'h-20'"
+          class="transition-all duration-300"
+        />
+      </div>
+
+      <ul class="flex space-x-6 font-bold uppercase tracking-wider">
+        <li><a href="#home" class="hover:text-[(--royal-gold)]">Home</a></li>
+        <li><a href="#spop" class="hover:text-[(--royal-gold)]">SPoP</a></li>
+        <li>
+          <a href="#love" class="hover:text-[(--royal-gold)]">Love Youth</a>
+        </li>
+        <li>
+          <a href="#giving" class="hover:text-[(--royal-gold)]">Giving Table</a>
+        </li>
+        <li><a href="#help" class="hover:text-[(--royal-gold)]">Help</a></li>
+        <li>
+          <a href="#connect" class="hover:text-[(--royal-gold)]">Connect</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section
+      id="home"
+      class="parallax h-screen flex items-center justify-center bg-black/40 bg-blend-overlay"
+      style="background-image: url(&quot;img/garden-hero.jpg&quot;)"
+    >
+      <div class="text-center text-white">
+        <h1 class="text-6xl font-serif mb-4">Love Community Garden</h1>
+        <p class="text-xl max-w-2xl mx-auto">
+          Cultivating growth, nutrition, and community connection in the heart
+          of the neighborhood.
+        </p>
+      </div>
+    </section>
+
+    <section id="spop" class="py-24 px-8 max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-[#88292f] mb-6">
+        Senior Power of Produce (SPoP)
+      </h2>
+      <p class="text-lg leading-relaxed">
+        Senior Power of Produce (SPoP) is a program designed to empower seniors
+        to lead healthy giving access to fresh produce at Muskegon Farmers
+        Market.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12">
+        <template x-for="i in [1,2,3,4,5,6]">
+          <div
+            class="overflow-hidden rounded-lg cursor-pointer group relative"
+            @click="modalOpen = true; activeImg = 'img' + i + '.jpg'"
+          >
+            <img
+              :src="'img' + i + '.jpg'"
+              class="transition-transform duration-500 group-hover:scale-110 group-hover:brightness-75 w-full h-64 object-cover"
+            />
+            <div
+              class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity text-white font-bold"
+            >
+              View Fullscreen
+            </div>
+          </div>
+        </template>
+      </div>
+    </section>
+
+    <section id="help" class="py-20 bg-stone-100 px-8 text-center">
+      <h2 class="text-3xl font-bold mb-4">How to Help</h2>
+      <p class="max-w-xl mx-auto">
+        Donations and volunteer hours keep our garden growing. [Detailed text on
+        donating/volunteering goes here].
+      </p>
+    </section>
+
+    <section
+      id="connect"
+      class="py-20 px-8 text-center bg-[--hunter-green] text-white"
+    >
+      <h2 class="text-3xl font-bold mb-4">Connect With Us</h2>
+      <p>Contact information and social media links.</p>
+    </section>
+
+    Giving table, Back to school, Garden.
+    <div
+      x-show="modalOpen"
+      class="fixed inset-0 z-100 bg-black flex items-center justify-center p-4"
+      x-transition
+      @click="modalOpen = false"
+    >
+      <img :src="activeImg" class="max-w-full max-h-full shadow-2xl" />
+      <button class="absolute top-10 right-10 text-white text-4xl">
+        &times;
+      </button>
+    </div>
+  </body>
+</html>

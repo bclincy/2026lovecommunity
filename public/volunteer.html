@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Love Community Garden, Muskegon MI</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Volunteer - Love Community Garden, Muskegon MI"
+    />
+    <meta
+      property="og:description"
+      content="Want to volunteer at Love Community Garden? We have many opportunities to get involved, from gardening and maintenance to youth programs and events. Join us in growing food, people, and connections in the Nelson Neighborhood of Muskegon, MI."
+    />
+    <meta property="og:url" content="https://lovecommunitygarden.org/" />
+    <meta
+      property="og:image"
+      content="https://lovecommunitygarden.org/img/garden-hero.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovecommunitygarden" />
+    <meta name="twitter:title" content="Love Community Garden, Muskegon MI" />
+    <meta
+      name="twitter:description"
+      content="A community garden in Nelson Neighborhood, Muskegon, MI - growing food, people, and connections through SPoP, youth programs, and the Giving Table."
+    />
+    <meta
+      name="twitter:image"
+      content="https://lovecommunitygarden.org/img/garden-hero.jpg"
+    />
+
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  </head>
+
+  <body class="bgexspresso text-white">
+    <section>
+      <h1>Love Community Garden - Volunteer</h1>
+
+      <p>
+        Want to volunteer at Love Community Garden? We have many opportunities
+        to get involved, from gardening and maintenance to youth programs and
+        events. Join us in growing food, people, and connections in the Nelson
+        Neighborhood of Muskegon, MI.
+      </p>
+      <form id="volunteer" method="post">
+        <div class="space-y-6">
+          <div>
+            <label
+              for="title"
+              class="text-xs xs:text-sm font-medium text-gray-700 mb-1"
+              >Job Title<!-- -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="17"
+                height="17"
+                color="#9CA3AF"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-circle-alert inline-block"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" x2="12" y1="8" y2="12"></line>
+                <line x1="12" x2="12.01" y1="16" y2="16"></line>
+              </svg> </label
+            ><input
+              type="text"
+              id="title"
+              class="h-12.5 rounded-[5px] text-xs xs:text-sm border border-[#D1D5DB] w-full px-2"
+              name="title"
+              value=""
+            />
+          </div>
+          <div class="grid sm:grid-cols-2 grid-cols-1 gap-6">
+            <div>
+              <label
+                for="category"
+                class="text-xs xs:text-sm font-medium text-gray-700 mb-1"
+                >Category</label
+              ><select
+                name="category"
+                id="category"
+                class="h-12.5 rounded-[5px] text-xs xs:text-sm border border-[#D1D5DB] w-full px-2"
+              >
+                <option value="" selected="">Select</option>
+                <option value="HR">HR</option>
+                <option value="programming">Programming</option>
+              </select>
+            </div>
+            <div>
+              <label
+                for="subcategory"
+                class="text-xs xs:text-sm font-medium text-gray-700 mb-1"
+                >Subcategory</label
+              ><select
+                name="subcategory"
+                id="subcategory"
+                class="h-12.5 rounded-[5px] text-xs xs:text-sm border border-[#D1D5DB] w-full px-2"
+              >
+                <option value="" selected="">Select</option>
+                <option value="HR-1">HR-1</option>
+                <option value="programming-1">Programming-1</option>
+              </select>
+            </div>
+          </div>
+          <div class="grid sm:grid-cols-2 grid-cols-1 gap-6">
+            <div>
+              <label
+                for="country"
+                class="text-xs xs:text-sm font-medium text-gray-700 mb-1"
+                >Country <span class="font-light">(Optional)</span></label
+              ><select
+                name="country"
+                id="country"
+                class="h-12.5 rounded-[5px] text-xs xs:text-sm border border-[#D1D5DB] w-full px-2"
+              >
+                <option value="" selected="">Select</option>
+                <option value="syria">Syria</option>
+                <option value="turkey">Turkey</option>
+              </select>
+            </div>
+            <div>
+              <label
+                for="language"
+                class="text-xs xs:text-sm font-medium text-gray-700 mb-1"
+                >Language</label
+              >
+              <div
+                class="flex flex-wrap items-center border rounded-md xs:p-2 bg-white"
+              >
+                <span
+                  class="bg-[#D9F99D] text-[#4D7C0F] px-1 py-0 xs:px-2 xs:py-1 rounded m-1 text-xs xs:text-sm flex items-center"
+                  >Arabic<button
+                    class="ml-1 text-[#4D7C0F] focus:outline-none"
+                    type="button"
+                  >
+                    ×
+                  </button></span
+                ><input
+                  type="text"
+                  placeholder="Add language"
+                  class="grow outline-none py-2 w-2/3 text-sm xs:ml-2"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 pt-6 border-t border-gray-200 flex justify-end">
+          <button
+            type="submit"
+            class="sm:w-21.5 w-full h-12.5 text-xs sm:text-base bg-[#4D7C0F] rounded-[5px] p-[13px_25px] gap-2.5 text-white"
+          >
+            Next
+          </button>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
