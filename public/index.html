@@ -12,10 +12,10 @@
       property="og:description"
       content="A community garden in Nelson Neighborhood, Muskegon, MI - growing food, people, and connections through SPoP, youth programs, and the Giving Table."
     />
-    <meta property="og:url" content="https://lovecommunitygarden.org/" />
+    <meta property="og:url" content="https://lovecommunitygarden.com/" />
     <meta
       property="og:image"
-      content="https://lovecommunitygarden.org/img/garden-hero.jpg"
+      content="https://lovecommunitygarden.com/img/garden-hero.jpg"
     />
 
     <!-- Twitter -->
@@ -28,7 +28,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://lovecommunitygarden.org/img/garden-hero.jpg"
+      content="https://lovecommunitygarden.com/img/garden-hero.jpg"
     />
 
     <link rel="manifest" href="/manifest.json" />
@@ -217,7 +217,7 @@
         id="spop"
         class="min-h-screen parallax relative"
         style="
-          background-image: url(&quot;https://assets.simpleviewinc.com/simpleview/image/upload/crm/muskegonmi/Overview-L-3-_9D46EBDD-5056-A36F-23F8E2B372CC24C1-9d46ea335056a36_9d46ee75-5056-a36f-231817b29d203ac2.jpg&quot;);
+          background-image: url(&quot;./images/MuskegonFarmersMarket.jpg&quot;);
         "
       >
         <div class="absolute inset-0 bg-black/65"></div>
@@ -245,7 +245,7 @@
             <p class="mt-4 text-white/80 text-sm">
               SPoP is made possible through the leadership of the
               <a
-                href="https://www.fruitportlions.org/"
+                href="https://www.fruitportlions.com/"
                 target="_blank"
                 class="text-royal-gold hover:underline"
               >
@@ -556,6 +556,11 @@
             <p
               class="mt-4 text-white/80 text-lg bg-black/40 backdrop-blur-md rounded-2xl p-4"
             >
+              <img
+                src="/img/thegivingtable.png"
+                alt="Logo The Giving Table in Muskegon, MI"
+                class="float-left ml-4 mb-2 w-48 p-4 rounded-lg object-cover border border-white/10 shadow-lg"
+              />
               An organization that is solely ran by volunteers and donations
               given by the community. At the Giving Table we provide the the
               unhoused and low-income community members with free clothing,
@@ -563,11 +568,27 @@
               right to have the basic necessities and we help fill that gap
               where needed.
             </p>
+            <p class="mt-4 text-white/80 text-lg">
+              The Giving Table homebase is located at the corner of Houston and 3rd in Muskegon, MI. 
+              <a href="https://maps.app.goo.gl/9vwrzirpdFdzTQJd9238" target="_blank" class="text-hunter-green hover:underline"></a><address>
+                238 Houston Avenue<br />
+                Muskegon, MI 49440<br /> 
+              </address></a>
+              Way to support the Giving Table:
+              <ul class="list-disc list-inside mt-2">
+                <li>Volunteer <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhxvWoqmHSuEawfuK7EliwUTTqfpchXSQkVeQm3a8cjjQGTQ/viewform" target="_blank" class="text-royal-gold hover:underline">(volunteer signup form)</a></li>
+                <li>Donations at these locations <a href="https://www.google.com/maps/@/data=!3m1!4b1!4m3!11m2!2se7_xVbc_RUG5CtINX_FCfQ!3e3?entry=tts&g_ep=EgoyMDI1MTIwOS4wKgBIAVAD&skid=c102dfae-9cdf-4ce8-8374-2449aebf0245" target="_blank" class="text-royal-gold hover:underline">(google maps)</a></li>
+                <li>Spread the word about the Giving Table <a href="https://www.facebook.com/TheGivingTableMuskegon/" target="_blank" class="text-royal-gold hover:underline">Facebook Page</a></li>
+              </ul>
+            </p>
           </div>
 
           <div class="mt-10">
             <h3 class="text-xl font-bold">At the table</h3>
-            <div class="mt-5 grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div
+              class="mt-5 grid grid-cols-2 md:grid-cols-3 gap-4"
+              id="giving-table-gallery"
+            >
               <button
                 class="gallery-item group rounded-2xl overflow-hidden border border-white/10 bg-white/5"
                 data-full="./images/GiveTable200.jpg"
@@ -681,6 +702,14 @@
                 produce access.
               </p>
               <ul class="mt-4 text-sm text-white/80 list-disc pl-5 space-y-1">
+                <li>
+                  <a
+                    href="https://www.amazon.com/hz/wishlist/ls/109BIUNJBGIIB?ref_wl_fv_le&content_source=fb&fb_content_id=Q9-wBQFy8eSXTL5FELGLFAJPi4DxtfxlAdbiavQmhsoWIiMiFXT_IlLkuyDT1Dnw0w&channel_type=fb&fbclid=IwY2xjawRMsnFleHRuA2FlbQIxMQBzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEeYqjlNL5jz5Df0SxRNwEF2BOWuLuLDFuiHizLbaax0IkDYP06lWL-CBcU5lg_aem_fis1RemrOsvBz1DNLwS_QQ"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Our Amazon Wishlist</a
+                  >
+                </li>
                 <li>One-time gifts</li>
                 <li>Monthly support</li>
                 <li>In-kind supplies</li>
@@ -741,7 +770,7 @@
           <h2 class="text-3xl md:text-5xl font-extrabold mt-2">
             Let’s Get in Touch
           </h2>
-
+          <div id="msg" role="alert"></div>
           <div class="mt-8 grid md:grid-cols-2 gap-8">
             <div class="rounded-2xl bg-white/10 p-6 border border-white/10">
               <h3 class="text-xl font-bold">Contact</h3>
@@ -753,7 +782,7 @@
               <div class="mt-4 space-y-2 text-sm text-white/80">
                 <div>
                   <span class="text-white/60">Email:</span>
-                  info @ lovecommunitygarden.org
+                  info @ lovecommunitygarden.com
                 </div>
                 <div>
                   <span class="text-white/60">Phone:</span
@@ -777,12 +806,6 @@
 
               <div class="mt-6 flex flex-wrap gap-3">
                 <a
-                  class="rounded-xl bg-royal-gold text-espresso px-4 py-2 font-semibold hover:brightness-110"
-                  href="#"
-                >
-                  Instagram
-                </a>
-                <a
                   class="rounded-xl border border-white/25 px-4 py-2 font-semibold hover:bg-white/10"
                   href="https://www.facebook.com/lovecommunitygarden"
                   target="_blank"
@@ -794,31 +817,63 @@
             </div>
 
             <div class="rounded-2xl bg-white/10 p-6 border border-white/10">
-              <h3 class="text-xl font-bold">Quick Message</h3>
+              <h3 class="text-xl font-bold">Contact Us</h3>
               <p class="mt-2 text-white/80 text-sm">
-                (Static starter form—wire it to your backend later, or use
-                Formspree/Netlify Forms.)
+                Please fill out the form below to send us a message. We look
+                forward to hearing from you!
               </p>
 
-              <form
-                class="mt-4 space-y-3"
-                onsubmit="
-                  event.preventDefault();
-                  alert('Thanks! Hook this up to your form handler.');
-                "
-              >
+              <form id="contactFrm" name="contactFrm" class="mt-4 space-y-3">
+                <div class="flex flex-col md:flex-row gap-3">
+                  <div class="form-group">
+                    <label for="fname">First Name</label
+                    ><input
+                      id="fname"
+                      name="fname"
+                      class="flex-1 rounded-xl bg-black/30 border border-white/10 px-4 py-3 outline-none focus:border-royal-gold focus:border-success bg-success-soft text-fg-success-strong focus:ring-success"
+                      placeholder="First Name"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="lname">Last Name</label
+                    ><input
+                      id="lname"
+                      name="lname"
+                      class="flex-1 rounded-xl bg-black/30 border border-white/10 px-4 py-3 outline-none focus:border-royal-gold focus:border-success bg-success-soft text-fg-success-strong focus:ring-success"
+                      placeholder="Last Name"
+                      required
+                    />
+                  </div>
+                </div>
+                <label
+                  for="subject"
+                  class="block mb-2.5 text-sm font-medium text-heading"
+                  >Select an option</label
+                >
                 <input
-                  class="w-full rounded-xl bg-black/30 border border-white/10 px-4 py-3 outline-none focus:border-royal-gold"
-                  placeholder="Name"
-                  required
-                />
-                <input
+                  name="email"
                   class="w-full rounded-xl bg-black/30 border border-white/10 px-4 py-3 outline-none focus:border-royal-gold"
                   placeholder="Email"
                   type="email"
                   required
                 />
+                <select
+                  id="subject"
+                  name="subject"
+                  required
+                  class="block w-full px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body"
+                >
+                  <option value="" selected>Select Department</option>
+                  <option value="senior">Senior Power of Produce</option>
+                  <option value="gardening">Gardening</option>
+                  <option value="help">Help</option>
+                  <option value="how">How you can help</option>
+                  <option value="technical">Technical/Problems</option>
+                  <option value="volunteer">Volunteering</option>
+                </select>
                 <textarea
+                  name="message"
                   class="w-full rounded-xl bg-black/30 border border-white/10 px-4 py-3 outline-none focus:border-royal-gold"
                   placeholder="How can we help?"
                   rows="5"
@@ -830,6 +885,7 @@
                   Send Message
                 </button>
               </form>
+              <div id="msg" style="display: none"></div>
             </div>
           </div>
 
@@ -897,6 +953,109 @@
         mobileMenuBtn.setAttribute("aria-expanded", String(isHidden));
       });
 
+      // Request a token once when the user starts typing their first name
+      const fnameInput = document.getElementById("fname");
+      const contactForm = document.getElementById("contactFrm");
+      let tokenRequested = false;
+
+      function requestFormToken() {
+        if (tokenRequested) return;
+        tokenRequested = true;
+
+        fetch("/api/token/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ form: "contact" }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (!data || !data.token) return;
+
+            let formTokenInput = document.getElementById("formToken");
+            if (!formTokenInput && contactForm) {
+              formTokenInput = document.createElement("input");
+              formTokenInput.type = "hidden";
+              formTokenInput.name = "token";
+              formTokenInput.id = "formToken";
+              contactForm.appendChild(formTokenInput);
+            }
+
+            if (formTokenInput) {
+              formTokenInput.value = data.token;
+            }
+          })
+          .catch((error) => {
+            console.error("Error requesting form token:", error);
+          });
+      }
+
+      fnameInput?.addEventListener("keydown", requestFormToken);
+
+      // Form submission handler
+      contactForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const formToken = document.getElementById("formToken");
+        if (!formToken || !formToken.value) {
+          // Request token if not present
+          try {
+            const response = await fetch("/api/token/", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ form: "contact" }),
+            });
+            const data = await response.json();
+            if (data.token) {
+              if (!formToken) {
+                const newToken = document.createElement("input");
+                newToken.type = "hidden";
+                newToken.name = "token";
+                newToken.id = "formToken";
+                contactForm.appendChild(newToken);
+              }
+              formToken.value = data.token;
+            } else {
+              showMessage("Failed to get token", false);
+              return;
+            }
+          } catch (error) {
+            showMessage("Error getting token", false);
+            return;
+          }
+        }
+
+        // Submit the form
+        const formData = new FormData(contactForm);
+        const jsonData = {};
+        for (let [key, value] of formData.entries()) {
+          jsonData[key] = value;
+        }
+
+        try {
+          const response = await fetch("/api/form/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(jsonData),
+          });
+          const data = await response.json();
+          showMessage(data.message || "Form submitted", data.success);
+        } catch (error) {
+          showMessage("Error submitting form", false);
+        }
+      });
+
+      function showMessage(msg, success) {
+        const msgDiv = document.getElementById("msg");
+        if (!msgDiv) return;
+        msgDiv.textContent = msg;
+        msgDiv.className = success
+          ? "text-fg-success-strong rounded-base bg-success-soft"
+          : "text-fg-danger-strong rounded-base bg-danger-soft";
+        msgDiv.style.display = "block";
+      }
+
       // Smooth snap scroll (menu click)
       document.querySelectorAll(".navlink").forEach((a) => {
         a.addEventListener("click", (e) => {
@@ -937,7 +1096,7 @@
 
       document.querySelectorAll(".gallery-item").forEach((btn) => {
         btn.addEventListener("click", () => {
-          const full = btn.src || btn.getAttribute("src");
+          const full = btn.dataset.full || btn.src || btn.getAttribute("src");
           if (full) openModal(full);
         });
       });

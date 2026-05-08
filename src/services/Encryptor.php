@@ -125,7 +125,7 @@ class Encryptor
      * @param string $encodedStr
      * @return string/boolean
      */
-    public static function decryptStr($encodedStr)
+    public static function decryptStr(string $encodedStr): string
     {
         $unencodeStr = base64_decode($encodedStr);
         if (is_string($unencodeStr)) {
