@@ -1,8 +1,8 @@
 <?php
 
-require_once __DIR__ . '../../../bootstrap.php';
+use App\Services\Encryptor;
 
-$encypt = new \App\Services\Encryptor();
+require_once __DIR__ . '/../../../bootstrap.php';
 header('Content-Type: application/json');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'code' => 200,
         'status' => 'accepted',
         'msg' => 'Token generated successfully',
-        'token' => $token
+        'token' => $token,
     ]);
 } else {
     echo json_encode([
@@ -22,17 +22,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     ]);
 }
 
+// echo $twig->render('index.html.twig', ['name' => 'Fabien']);
+
+
 
 function createToken($expiry = 3600): string
 {
     $newToken = [
-        'request_time' => time(),
         'expiry_time' => time() + $expiry,
         'ipAddress' => $_SERVER['REMOTE_ADDR'] ?? 'unknown',
-        'userAgent' => $_SERVER['HTTP_USER_AGENT'] ?? 'unknown',
         'referer' => $_SERVER['HTTP_REFERER'] ?? 'unknown',
+        'userAgent' => $_SERVER['HTTP_USER_AGENT'] ?? 'unknown'
     ];
 
-    $token = base64_encode(json_encode($newToken));
-    return $token;
+    $data = json_encode($newToken);
+
+    return Encryptor::encryptStr($data);
 }

@@ -1,13 +1,9 @@
 <?php
 
 namespace App\Services;
+require_once __DIR__ . '../../../bootstrap.php';
 
 use Monolog\Logger;
-use Swift_Mailer;
-use Swift_SmtpTransport;
-use Swift_Transport;
-
-require_once __DIR__ . '../../../bootstrap.php';
 
 
 /**
@@ -42,4 +38,13 @@ class Utility
     {
         return filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
     }
+
+    public function getTokenData(string $token): ?array
+    {
+        $decodedToken = Encryptor::decryptStr($token);
+
+        return json_decode((string) $decodedToken, true) ?: null;
+
+    }
+
 }

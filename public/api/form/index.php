@@ -4,6 +4,8 @@ require_once __DIR__ . '../../../bootstrap.php';
 
 header('Content-Type: application/json');
 
+$encypt = new \App\Services\Encryptor();
+die(var_dump($_REQUEST));
 
 
 // $email = (new Email())
