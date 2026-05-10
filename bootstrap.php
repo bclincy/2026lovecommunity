@@ -1,9 +1,9 @@
 <?php
 
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 use Dotenv\Dotenv;
-$dotenv = Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
 use Monolog\Level;
@@ -20,16 +20,16 @@ use Symfony\Component\Mime\Part\File;
 try {
     // create a log channel
     $log = new Logger('name');
-    $log->pushHandler(new StreamHandler(__DIR__ . '/../var/logs/site.log', Level::Warning));
-
+    $log->pushHandler(new StreamHandler(__DIR__ . '/var/logs/site.log', Level::Warning));
     $log->info('Bootstrap file loaded');
 
     // Load templates from a specific directory
-    $loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/../src/templates');
+    $loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/src/templates');
 
     // Initialize Twig environment with optional caching
     $twig = new \Twig\Environment($loader, [
-        'cache' => __DIR__ . '/../var/cache',
+        'cache' => __DIR__ . '/var/cache',
+        'debug' => true,
     ]);
     // $charset = 'utf8mb4';
 
