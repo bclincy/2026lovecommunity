@@ -31,7 +31,19 @@ try {
         'cache' => __DIR__ . '/var/cache',
         'debug' => true,
     ]);
-    // $charset = 'utf8mb4';
+    $charset = 'utf8mb4';
+
+    // try {
+    //     $db = new PDO("mysql:host=localhost;dbname={$_ENV['}", $user, $password);
+    //     echo "<h2>TODO</h2><ol>";
+    //     foreach ($db->query("SELECT content FROM $table") as $row) {
+    //         echo "<li>" . $row['content'] . "</li>";
+    //     }
+    //     echo "</ol>";
+    // } catch (PDOException $e) {
+    //     print "Error!: " . $e->getMessage() . "<br/>";
+    //     die();
+    // }
 
     // $dsn = 'mysql:host=' . $_ENV['DB_HOST'] . ';dbname=' . $_ENV['DB_NAME'] . ';charset=' . $charset;
     // $options = [

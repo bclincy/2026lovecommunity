@@ -703,10 +703,17 @@
                   required
                 ></textarea>
                 <button
-                  class="w-full rounded-xl bg-chocolate text-espresso px-4 py-3 font-semibold hover:brightness-110"
+                  class="w-full rounded-xl bg-chocolate border border-amber-400 text-espresso px-4 py-3 font-semibold border-default-medium hover:brightness-110 focus:border-royal-gold"
                 >
                   Send Message
                 </button>
+                <div
+                  class="cf-turnstile p-5"
+                  data-sitekey="0x4AAAAAADPOpUHVfCLAHpif"
+                  data-theme="light"
+                  data-size="normal"
+                  data-callback="onSuccess"
+                ></div>
               </form>
               <div id="msg" style="display: none"></div>
             </div>
@@ -768,6 +775,18 @@
       }
       window.addEventListener("scroll", onScroll);
       onScroll();
+
+      function setMessageTimeOut(element, duration = 3000) {
+        setTimeout(() => {
+          if (element instanceof HTMLElement) {
+            element.classList.add("translate-x-full", "opacity-0");
+            setTimeout(() => {
+              element.style.display = "none";
+              element.className = "";
+            }, 500);
+          }
+        }, duration);
+      }
 
       // Mobile menu toggle
       mobileMenuBtn?.addEventListener("click", () => {
@@ -864,8 +883,10 @@
           });
           const data = await response.json();
           showMessage(data.message || "Form submitted", data.success);
+          enableForm();
         } catch (error) {
           showMessage("Error submitting form", false);
+          enableForm();
         }
       });
 
@@ -874,9 +895,10 @@
         if (!msgDiv) return;
         msgDiv.textContent = msg;
         msgDiv.className = success
-          ? "text-fg-success-strong rounded-base bg-success-soft"
-          : "text-fg-danger-strong rounded-base bg-danger-soft";
+          ? "bg-green-100 text-green-800 p-4 rounded transition-all duration-500 transform translate-y-0 opacity-100"
+          : "bg-red-100 text-red-800 p-4 rounded transition-all duration-500 transform translate-y-0 opacity-100";
         msgDiv.style.display = "block";
+        setMessageTimeOut(msgDiv);
       }
 
       // Smooth snap scroll (menu click)
@@ -931,6 +953,14 @@
       window.addEventListener("keydown", (e) => {
         if (e.key === "Escape") hideModal();
       });
+      function enableForm() {
+        const elements = document.querySelectorAll(
+          "#contactFrm input, #contactFrm select, #contactFrm textarea, #contactFrm button",
+        );
+        elements.forEach((element) => {
+          element.disabled = false;
+        });
+      }
     </script>
   </body>
 </html>
