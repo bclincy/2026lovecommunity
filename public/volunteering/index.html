@@ -269,6 +269,7 @@
                     </button></span
                   ><input
                     type="text"
+                    name="language"
                     placeholder="Add language"
                     class="grow outline-none py-2 w-2/3 text-sm xs:ml-2"
                     value=""
@@ -291,25 +292,69 @@
     </section>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        debugger;
-        fetch("/api/token", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            console.log("Token fetched:", data);
-            if (data.token) {
-              document.getElementById("token").value = data.token;
-            }
-          })
-          .catch((error) => {
-            console.error("Error fetching token:", error);
+      const volunteerForm = document.getElementById('volunteer');
+      const volunteerToken = document.getElementById('token');
+      const volunteerMessage = document.createElement('div');
+      volunteerMessage.id = 'message';
+      volunteerMessage.style.display = 'none';
+      volunteerMessage.style.color = '#0f5132';
+      volunteerMessage.style.marginBottom = '1rem';
+      volunteerForm?.insertBefore(volunteerMessage, volunteerForm.firstChild);
+
+      function showMessage(text, success) {
+        volunteerMessage.style.display = 'block';
+        volunteerMessage.style.color = success ? '#0f5132' : '#b91c1c';
+        volunteerMessage.textContent = text;
+      }
+
+      async function requestVolunteerToken() {
+        try {
+          const response = await fetch('/api/token', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
           });
-      });
+          const data = await response.json();
+          if (data.token) {
+            volunteerToken.value = data.token;
+          }
+        } catch (error) {
+          console.error('Error fetching token:', error);
+          showMessage('Unable to acquire token. Please refresh the page.', false);
+        }
+      }
+
+      async function submitVolunteer(event) {
+        event.preventDefault();
+        if (!volunteerToken.value) {
+          await requestVolunteerToken();
+        }
+
+        const formData = new FormData(volunteerForm);
+        const payload = {};
+        formData.forEach((value, key) => {
+          payload[key] = value;
+        });
+
+        try {
+          const response = await fetch('/api/form/volunteer', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+          });
+          const data = await response.json();
+          showMessage(data.message || 'Submission sent.', Boolean(data.success));
+          if (data.success) {
+            volunteerForm.reset();
+            volunteerToken.value = '';
+          }
+        } catch (error) {
+          console.error('Error submitting volunteer form:', error);
+          showMessage('Submission failed. Please try again.', false);
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', requestVolunteerToken);
+      volunteerForm?.addEventListener('submit', submitVolunteer);
     </script>
   </body>
 </html>

@@ -1,15 +1,26 @@
 <?php
 
+use App\Services\Encryptor;
+
 require_once __DIR__ . '/../../../bootstrap.php';
 
 header('Content-Type: application/json');
 
-$encypt = new \App\Services\Encryptor();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $formData = json_decode(file_get_contents('php://input'), true);
     if (isset($formData['token'])) {
-        $decrypted = $encypt->decryptStr($formData['token']);
-        $formdata['meta'] = $decrypted;
+        $decrypted = Encryptor::decryptStr($formData['token']);
+        $formData['meta'] = $decrypted;
+        $isValid = is_array($decrypted) && isset($decrypted['timestamp']) && !expiredRequest((int)$decrypted['timestamp']);
+        if (!$isValid) {
+            echo json_encode([
+                'code' => 400,
+                'status' => 'rejected',
+                'msg' => 'Invalid Submission please try again.'
+            ]);
+            exit;
+        }
+
         $records = getContactData();
         $records[] = $formData;
         saveContactData($records);
@@ -70,4 +81,12 @@ function saveContactData(array $data): bool
 {
     $file = __DIR__ . '/../../../data/contacts.json';
     return file_put_contents($file, json_encode($data, JSON_PRETTY_PRINT));
+}
+
+function expiredRequest(int $timestamp): bool
+{
+    $currentTime = time();
+    $timeDiff = $currentTime - $timestamp;
+
+    return $timeDiff > 300; // 5 minutes in seconds
 }
