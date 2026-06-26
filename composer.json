@@ -16,9 +16,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "App\\": "src/",
-            "Bclincy\\2026lovecommunity\\": "src/services/"
-        }
+            "App\\": "src/"        }
     },
     "authors": [
         {

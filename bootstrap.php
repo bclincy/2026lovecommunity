@@ -16,6 +16,10 @@ use Symfony\Component\Mime\Address;
 use Symfony\Component\Mime\Part\DataPart;
 use Symfony\Component\Mime\Part\File;
 
+if (class_exists('App\Services\Encryptor') !== true) {
+    require_once __DIR__ . '/src/services/Encryptor.php';
+}
+
 //setup Globals
 try {
     // create a log channel
