@@ -7,3 +7,4 @@ src/output.css
 var/
 data/contacts.json
 .env
+src/main.css
