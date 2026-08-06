@@ -5,3 +5,5 @@ src/output.css
 /vendor/
 
 var/
+data/contacts.json
+.env
